@@ -15,8 +15,8 @@
 body {
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 background-color: #FFF5F8;
-width: 375px;
-height: 762px;
+width: 393px;
+height: 852px;
 margin: 0 auto;
 position: relative;
 overflow-x: hidden;
@@ -27,6 +27,17 @@ outline: none;
 .ios-status-bar {
 font-size: 14px;
 font-weight: 600;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 22px;
+height: 47px;
+background-color: transparent;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 50;
 }
 .photo-grid {
 display: grid;
@@ -36,6 +47,13 @@ gap: 8px;
 .safe-area {
 height: 34px;
 }
+.home-indicator {
+width: 134px;
+height: 5px;
+background-color: #000;
+border-radius: 100px;
+margin: 8px auto;
+}
 .card {
 border-radius: 24px;
 background-color: white;
@@ -44,9 +62,25 @@ box-shadow: 0 4px 20px rgba(255, 77, 141, 0.1);
 </style>
 </head>
 <body class="text-gray-800">
-
+<!-- iOS 状态栏 -->
+<div class="ios-status-bar">
+  <div class="flex items-center">
+    <span>9:41</span>
+  </div>
+  <div class="flex items-center space-x-2">
+    <div class="w-4 h-4 flex items-center justify-center">
+      <i class="ri-signal-wifi-line"></i>
+    </div>
+    <div class="w-4 h-4 flex items-center justify-center">
+      <i class="ri-signal-tower-line"></i>
+    </div>
+    <div class="w-4 h-4 flex items-center justify-center">
+      <i class="ri-battery-line"></i>
+    </div>
+  </div>
+</div>
 <!-- 导航栏 -->
-<div class="fixed w-full top-0 bg-white z-40 flex items-center justify-between py-4 px-5 rounded-b-2xl shadow-sm">
+<div class="fixed w-full top-[47px] bg-white z-40 flex items-center justify-between py-4 px-5 rounded-b-2xl shadow-sm">
 <div class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center cursor-pointer">
 <div class="w-6 h-6 flex items-center justify-center">
 <i class="ri-arrow-left-s-line ri-lg text-primary"></i>
@@ -65,7 +99,7 @@ box-shadow: 0 4px 20px rgba(255, 77, 141, 0.1);
 </div>
 </div>
 <!-- 主内容区 -->
-<div class="pt-20 pb-20 px-4">
+<div class="pt-[115px] pb-20 px-4">
 <!-- 照片展示区 -->
 <div class="card p-5 mb-6">
 <div class="photo-grid mb-4">
@@ -187,6 +221,7 @@ box-shadow: 0 4px 20px rgba(255, 77, 141, 0.1);
 <button class="bg-primary text-white px-10 py-3.5 rounded-full font-medium cursor-pointer !rounded-button shadow-md">发布</button>
 </div>
 <div class="safe-area"></div>
+<div class="home-indicator"></div>
 </div>
 <script>
 // 标题输入处理
