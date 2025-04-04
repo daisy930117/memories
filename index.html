@@ -1409,6 +1409,160 @@
           </div>
         </div>
       </div>
+      
+      <!-- 详情页面 -->
+      <div class="phone-frame bg-pink-50/30">
+        <!-- 状态栏 -->
+        <div class="ios-status-bar bg-transparent flex items-center justify-between px-6 pt-3">
+          <span class="text-black text-sm font-medium">9:41</span>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+          </div>
+        </div>
+
+        <!-- 主体内容 -->
+        <div class="flex flex-col h-full">
+          <!-- 顶部导航 -->
+          <div class="flex justify-between items-center px-5 py-2">
+            <button class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center ios-btn">
+              <i class="fas fa-chevron-left text-primary-pink"></i>
+            </button>
+            <div class="flex items-center text-primary-pink">
+              <i class="far fa-calendar-alt mr-2"></i>
+              <span class="text-lg">2025年4月3日</span>
+            </div>
+            <button class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center ios-btn">
+              <i class="fas fa-ellipsis-h text-primary-pink"></i>
+            </button>
+          </div>
+
+          <!-- 主要内容区域 -->
+          <div class="flex-1 px-5 py-4 overflow-auto">
+            <!-- 图片网格 -->
+            <div class="bg-white rounded-3xl p-4 shadow-sm mb-4">
+              <div class="grid grid-cols-3 gap-3">
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216" class="w-full h-full object-cover" />
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1576078437636-a3cee96cd3ce" class="w-full h-full object-cover" />
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1532347922424-c652d9b7208e" class="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 添加更多按钮 -->
+            <div class="bg-white rounded-3xl p-4 mb-6">
+              <button class="w-full h-12 flex items-center justify-center text-primary-pink ios-btn">
+                <i class="fas fa-plus mr-2"></i>
+                <span>添加更多</span>
+              </button>
+            </div>
+
+            <!-- 标题输入 -->
+            <div class="mb-4">
+              <input type="text" placeholder="添加标题" class="w-full text-xl text-gray-400 bg-transparent border-none focus:outline-none" />
+            </div>
+
+            <!-- 内容输入 -->
+            <div class="mb-6">
+              <textarea placeholder="写下感受和记忆..." class="w-full h-32 text-gray-400 bg-transparent border-none focus:outline-none resize-none"></textarea>
+            </div>
+
+            <!-- 位置信息 -->
+            <div class="bg-white rounded-3xl mb-4">
+              <button class="w-full flex items-center justify-between p-4 ios-btn">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-2xl bg-pink-50 flex items-center justify-center mr-3">
+                    <i class="fas fa-map-marker-alt text-primary-pink"></i>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <span class="text-base font-medium">添加位置</span>
+                    <span class="text-sm text-gray-400">记录此刻所在</span>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-right text-gray-300"></i>
+              </button>
+            </div>
+
+            <!-- 标签 -->
+            <div class="bg-white rounded-3xl mb-4">
+              <button class="w-full flex items-center justify-between p-4 ios-btn">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-2xl bg-purple-50 flex items-center justify-center mr-3">
+                    <i class="fas fa-tags text-primary-purple"></i>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <span class="text-base font-medium">添加标签</span>
+                    <span class="text-sm text-gray-400">分类你的回忆</span>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-right text-gray-300"></i>
+              </button>
+            </div>
+
+            <!-- 心情选择 -->
+            <div class="mb-6">
+              <h3 class="text-base mb-4">今日心情</h3>
+              <div class="flex justify-between">
+                <button class="ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center">
+                    <i class="far fa-smile text-2xl text-primary-pink"></i>
+                  </div>
+                </button>
+                <button class="ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="far fa-meh text-2xl text-gray-300"></i>
+                  </div>
+                </button>
+                <button class="ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="far fa-meh-rolling-eyes text-2xl text-gray-300"></i>
+                  </div>
+                </button>
+                <button class="ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="far fa-grin-beam text-2xl text-gray-300"></i>
+                  </div>
+                </button>
+                <button class="ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="far fa-sad-tear text-2xl text-gray-300"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 底部工具栏 -->
+          <div class="px-5 py-4 bg-transparent">
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-8">
+                <button class="flex flex-col items-center ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center mb-1">
+                    <i class="fas fa-camera text-primary-pink"></i>
+                  </div>
+                  <span class="text-xs text-gray-400">拍摄</span>
+                </button>
+                <button class="flex flex-col items-center ios-btn">
+                  <div class="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center mb-1">
+                    <i class="far fa-image text-primary-pink"></i>
+                  </div>
+                  <span class="text-xs text-gray-400">相册</span>
+                </button>
+              </div>
+              <button class="px-8 py-3 bg-primary-pink text-white rounded-full text-base font-medium ios-btn">
+                发布
+              </button>
+            </div>
+            <div class="home-indicator mt-2"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
